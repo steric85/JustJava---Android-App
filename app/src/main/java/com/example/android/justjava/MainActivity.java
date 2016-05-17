@@ -5,8 +5,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import java.text.NumberFormat;
-
 /**
  * This app displays an order form to order coffee.
  */
@@ -26,7 +24,7 @@ public class MainActivity extends ActionBarActivity {
     public void submitOrder(View view) {
 //        display(quantity);
 //        displayPrice(quantity * 5);
-        String priceMessage="Total: $"+ quantity * 5 +"\nThankyou! :D" ;
+        String priceMessage="Name: Aneree Mehta\nQuantity: "+quantity+"\nTotal: $"+ quantity * 5 +"\nThankyou! :D" ;
         displayMessage(priceMessage);
     }
 
@@ -43,10 +41,7 @@ public class MainActivity extends ActionBarActivity {
      * This method displays the given price on the screen.
      */
 
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-    }
+
 
     public void increment(View view){
 
@@ -62,7 +57,7 @@ public class MainActivity extends ActionBarActivity {
      * This method displays the given text on the screen.
      */
     private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+        TextView osTextView = (TextView) findViewById(R.id.order_summary_text_view);
+        osTextView.setText(message);
     }
 }
