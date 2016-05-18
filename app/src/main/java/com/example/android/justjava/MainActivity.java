@@ -23,8 +23,9 @@ public class MainActivity extends ActionBarActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        CheckBox a= (CheckBox)findViewById(R.id.notify_me_checkbox);
-        String priceMessage="Name: Aneree Mehta\nAdd Whipped Cream? "+a.isChecked()+"\nQuantity: "+quantity+"\nTotal: $"+ quantity * 5 +"\nThankyou! :D" ;
+        CheckBox a= (CheckBox)findViewById(R.id.notify_me_checkbox1);
+        CheckBox b= (CheckBox)findViewById(R.id.notify_me_checkbox2);
+        String priceMessage="Name: Aneree Mehta\nAdd Whipped Cream? "+a.isChecked()+"\nAdd Chocolate? "+b.isChecked()+"\nQuantity: "+quantity+"\nTotal: $"+ quantity * 5 +"\nThankyou! :D" ;
         displayMessage(priceMessage);
     }
 

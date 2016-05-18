@@ -21,10 +21,18 @@
             android:textAllCaps="true"/>
 
         <CheckBox
-            android:id="@+id/notify_me_checkbox"
+            android:id="@+id/notify_me_checkbox1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Whipped Cream"
+            android:paddingLeft="24dp"
+            android:textSize="16sp"/>
+
+        <CheckBox
+            android:id="@+id/notify_me_checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolate"
             android:paddingLeft="24dp"
             android:textSize="16sp"
             android:layout_marginBottom="16dp"/>
