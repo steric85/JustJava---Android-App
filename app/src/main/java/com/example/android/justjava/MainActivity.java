@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -25,7 +26,8 @@ public class MainActivity extends ActionBarActivity {
     public void submitOrder(View view) {
         CheckBox a= (CheckBox)findViewById(R.id.notify_me_checkbox1);
         CheckBox b= (CheckBox)findViewById(R.id.notify_me_checkbox2);
-        String priceMessage="Name: Aneree Mehta\nAdd Whipped Cream? "+a.isChecked()+"\nAdd Chocolate? "+b.isChecked()+"\nQuantity: "+quantity+"\nTotal: $"+ quantity * 5 +"\nThankyou! :D" ;
+        EditText t=(EditText)findViewById(R.id.name);
+        String priceMessage="Name: "+t.getText().toString()+"\nAdd Whipped Cream? "+a.isChecked()+"\nAdd Chocolate? "+b.isChecked()+"\nQuantity: "+quantity+"\nTotal: $"+ quantity * 5 +"\nThankyou! :D" ;
         displayMessage(priceMessage);
     }
 
@@ -61,4 +63,5 @@ public class MainActivity extends ActionBarActivity {
         TextView osTextView = (TextView) findViewById(R.id.order_summary_text_view);
         osTextView.setText(message);
     }
+
 }
